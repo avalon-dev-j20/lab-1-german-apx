@@ -3,33 +3,13 @@ package ru.avalon.java.j20.labs.tasks;
 import ru.avalon.java.j20.labs.Task;
 import ru.avalon.java.j20.labs.models.Person;
 
-/**
- * Задание №4.
- *
- * <p>Тема: "Методы класса {@link Object}".
- */
 public class Task4 implements Task {
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     public void run() {
-        Person a = new Person("Иван", "Иванов");
-        Person b = new Person("Иван", "Иванов");
+        Person a = new Person("Василий", "Петров");
+        Person b = new Person("Василий", "Петров");
         boolean isEqual = a.equals(b);
-        /*
-         * TODO(Студент): Выполните задание №4
-         *
-         * 1. С использованием отладчика проверьте, что
-         *    сравнение объектов класса Person выполняется
-         *    некорректно.
-         *
-         * 2. Переопределите в классе Person методы equals и
-         *    hashCode.
-         *
-         * 3. С использованием отладчика проверьте что сравнение
-         *    объектов типа Person выполняется корректно.
-         */
+
     }
 }

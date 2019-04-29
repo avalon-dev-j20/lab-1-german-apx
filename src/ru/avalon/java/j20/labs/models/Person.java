@@ -1,45 +1,36 @@
 package ru.avalon.java.j20.labs.models;
 
-/**
- * Представление о человеке.
- */
+import java.util.Objects;
+
 public class Person {
-    /**
-     * Имя.
-     */
-    private final String name;
-    /**
-     * Фамилия.
-     */
-    private final String surname;
 
-    /**
-     * Создаёт экземпляр класса на основании имени и даты
-     * рождения.
-     *
-     * @param name имя человека
-     * @param surname дата рождения человека
-     */
+    private final String NAME;
+    private final String SURNAME;
+
     public Person(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
+        this.NAME = name;
+        this.SURNAME = surname;
     }
 
-    /**
-     * возвращает имя человека.
-     *
-     * @return имя человека
-     */
-    public String getName() {
-        return name;
+    public String getNAME() {
+        return NAME;
     }
 
-    /**
-     * Возвращает фамилию человека.
-     *
-     * @return фамилия человека
-     */
-    public String getSurname() {
-        return surname;
+    public String getSURNAME() {
+        return SURNAME;
+    }
+
+    @Override
+    public boolean equals(Object otherObject) {
+        if (otherObject instanceof Person) {
+            Person otherPerson = (Person) otherObject;
+            return NAME.equals(otherPerson.NAME) && SURNAME.equals(otherPerson.SURNAME);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(NAME, SURNAME);
     }
 }
