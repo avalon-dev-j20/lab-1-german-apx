@@ -10,12 +10,12 @@ public class Point<T extends Number> {
         this.Y = Y;
     }
 
-    public double getX() {
-        return X.doubleValue();
+    public T getX() {
+        return X;
     }
 
-    public double getY() {
-        return Y.doubleValue();
+    public T getY() {
+        return Y;
     }
 
     public double distanceTo(Point point) {

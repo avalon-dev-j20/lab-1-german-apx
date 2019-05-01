@@ -13,3 +13,4 @@ public class Task2 implements Task {
         double length = a.distanceTo(b);
 
     }
+}
